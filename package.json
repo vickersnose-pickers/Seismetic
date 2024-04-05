@@ -1,10 +1,12 @@
 {
   "name": "seismetic",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "description": "The Latest and Final Version of Seismetic",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app/index.js",
+    "version": "echo 4.0.0",
+    "test": "echo TestStore coming soon!"
   },
   "keywords": [],
   "author": "",
