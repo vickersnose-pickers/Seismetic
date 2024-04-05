@@ -1,0 +1,16 @@
+{
+  "name": "seismetic",
+  "version": "1.0.0",
+  "description": "The Latest and Final Version of Seismetic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bsn": "github:SeismeticNetwork/dependecy-1",
+    "express": "^4.19.2"
+  }
+}
