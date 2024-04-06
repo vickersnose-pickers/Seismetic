@@ -21,6 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, FrontEnd)));
 app.use('/BrowserPages', express.static(path.join(__dirname, BrowserPages)));
+app.use('/Assets', express.static(path.join(__dirname, './Assets')));
 
 HTTP_S.on('request', (req, res) => {
     if (bareServer.shouldRoute(req)) {
