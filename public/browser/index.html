@@ -9,15 +9,8 @@
 </head>
 
 <body>
-  <div class="BrowserBar">
-    <div class="Tab" id="Tab1">
-      <div class="LittleLine"></div>
-      <div class="BigLine">
-        <p id="Tab1_p">New Tab</p>
-        <a>X</a>
-      </div>
-    </div>
-    <button class="adds" id="add">+</button>
+  <div class="BrowserBar" id="BrowserAppend">
+    <button class="adds" id="add" onclick="CreateTab()">+</button>
   </div>
   <div class="ActionBar">
     <div class="BrowserControls">
@@ -39,7 +32,6 @@
     </div>
   </div>
   <div id="Iframeholder">
-    <iframe src="/BrowserPages/" id="bing"></iframe>
   </div>
   <script src="../Assets/javascript/TabSystem.js"></script>
 </body>

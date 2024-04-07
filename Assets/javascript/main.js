@@ -15,5 +15,5 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const url = search(address.value, searchEngine.value);
 
-  window.location.href = `http://${window.location.host}/network/${__uv$config.encodeUrl(url)}`;
+  window.location.href = `http://${window.location.host}/${__uv$config.prefix}/${__uv$config.encodeUrl(url)}`;
 });
