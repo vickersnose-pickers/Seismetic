@@ -1,7 +1,7 @@
 //configuration
 console.log('Starting Seismetic -');
 const BareDirectory = '/bare/';
-const PORT = 8080;
+const PORT = 4242;
 const FrontEnd = 'public';
 const BrowserPages = 'BrowserPages';
 
