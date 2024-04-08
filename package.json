@@ -2,9 +2,9 @@
   "name": "seismetic",
   "version": "4.0.0",
   "description": "The Latest and Final Version of Seismetic",
-  "main": "app/index.mjs",
+  "main": "src/index.mjs",
   "scripts": {
-    "start": "node app/index.mjs",
+    "start": "node src/index.mjs",
     "version": "echo 4.0.0",
     "test": "echo TestStore coming soon!"
   },
