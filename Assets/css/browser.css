@@ -255,7 +255,8 @@ body {
 
 .bigbox button {
   border: none;
-  border-radius: 250px;
+  border-radius: 5px;
+  height: 35px;
   background-color: rgb(39, 168, 39);
   color: white;
   margin-left: 10px;
