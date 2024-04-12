@@ -1,0 +1,17 @@
+{
+    "name": "Seismetic",
+    "short_name": "seismetic",
+    "description": "A powerful web proxy browser for privacy.",
+    "icons": [
+      {
+        "src": "/Assets/seismetic.png",
+        "sizes": "800x800",
+        "type": "image/png"
+      }
+    ],
+    "lang": "en-US",
+    "start_url": "/browser",
+    "display": "standalone",
+    "background_color": "black",
+    "theme_color": "black"
+  }

@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../Assets/css/Browser.css">
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" href="/logos/logo.svg" />
+    <link rel="manifest" href="../manifest.json" />
+
 <link rel="icon" type="image/png" href="https://ssl.gstatic.com/classroom/favicon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..30,100..700,0..1,-50..100" />
 </head>
@@ -33,10 +37,41 @@
       <button id="options"><span class="material-symbols-outlined">tune</span></button>
     </div>
   </div>
+  <div class="Extensions" id="ext">
+    <div id="NoExtensionsAvailable" style="display: none;">
+      <a class="SpanLogo"><span class="material-symbols-outlined">
+        extension
+        </span></a>
+        <h1>No Extensions Available</h1>
+    </div>
+    <div class="ExtensionCard">
+      <img src="https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdE5VzPRli24SpK9ph68u1Y=/eruda-mobile-browser-console-2023-01-04%2000-00-00-2024-03-06%2017-34-30" alt="Eruda">
+      <div class="bigbox">
+        <p>Eruda</p>
+        <button onclick="ExecuteScript('eruda')">Exeute</button>
+      </div>
+    </div>
+    <div class="ExtensionCard">
+      <img src="https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdE5VzPRli24SpK9ph68u1Y=/eruda-mobile-browser-console-2023-01-04%2000-00-00-2024-03-06%2017-34-30" alt="Eruda">
+      <div class="bigbox">
+        <p>Adblocker</p>
+        <button onclick="ExecuteScript('adblocker')">Exeute</button>
+      </div>
+    </div>
+    <div class="ExtensionCard">
+      <img src="https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdE5VzPRli24SpK9ph68u1Y=/eruda-mobile-browser-console-2023-01-04%2000-00-00-2024-03-06%2017-34-30" alt="Eruda">
+      <div class="bigbox">
+        <p>Load Vencord</p>
+        <button onclick="ExecuteScript('vencord')">Exeute</button>
+      </div>
+    </div>
+  </div>
   <div id="Iframeholder">
   </div>
-  <script src="../Assets/javascript/TabSystem.js"></script>
+  <script src="../Assets/javascript/TabSystem.js?v=3"></script>
   <script src="../dist/bundle.js?v=5"></script>
   <script src="../dist/config.js?v=5"></script>
+  <script src="../Assets/javascript/search.js"></script>
+  <script src="../Assets/javascript/extension.js"></script>
 </body>
 </html>
