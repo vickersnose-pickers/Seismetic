@@ -1,5 +1,5 @@
 //configuration
-console.log('Starting Seismetic -');
+console.log('🔑 |Starting Seismetic -');
 const BareDirectory = '/bare/';
 const PORT = 4242;
 const FrontEnd = 'public';
@@ -11,11 +11,11 @@ import { createBareServer } from "bsn";
 import path from 'node:path';
 
 const HTTP_S = http.createServer();
-console.log('* Created Server');
+console.log('💽| Created Server');
 const __dirname = process.cwd();
 const app = express(HTTP_S);
 const bareServer = createBareServer(BareDirectory);
-console.log('* Created Bare Server');
+console.log('💽| Created Bare Server');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -40,8 +40,8 @@ HTTP_S.on('request', (req, res) => {
   });
   
   HTTP_S.on('listening', () => {
-    console.log(`Succesfully started Seismetic`);
-    console.log(`Running at http://localhost:${PORT}`);
+    console.log(`✅ | Succesfully started Seismetic`);
+    console.log(`👁️ |Running at http://localhost:${PORT} or http://127.0.0.1${PORT}`);
   });
   
   HTTP_S.listen({
