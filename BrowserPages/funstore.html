@@ -9,21 +9,185 @@
             height: 100vh;
             display: flex;
             padding: 0;
+            font-family: "Roboto", sans-serif;
             background-color: white;
             margin: 0;
+            flex-direction: column;
         }
 
         nav {
+            font-family: "Roboto", sans-serif;
             width: 100%;
             height: 60px;
+            display: flex;
+            flex-direction: row;
             box-shadow: 10px 10px 34px -4px rgba(0, 0, 0, 0.567);
             background-color: rgb(255, 255, 255);
+            gap: 15px;
+        }
+
+        nav img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .ButtonI {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            color: rgb(137, 137, 137);
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            width: 80px;
+            height: 60px;
+        }
+
+        .bottombar {
+            width: inherit;
+            height: 2px;
+            margin-top: -5px;
+            border-radius: 5px;
+            background-color: rgb(137, 137, 137);
+        }
+
+        #ExtensionHolder {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+         flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+           justify-content: center;
+  align-items: center;
+        }
+
+        .Extension_Card {
+            width: 385px;
+            box-shadow: 10px 10px 34px -4px rgba(0, 0, 0, 0.567);
+            height: 170px;
+            border-radius: 10px;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Extension_Card img {
+            width: 135px;
+            border-radius: 10px;
+            height: 135px;
+        }
+
+        .VerticalAlignment {
+            width: 250px;
+            height: 135px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .VerticalAlignment button {
+            background-color: rgb(32, 159, 32);
+            border: none;
+            height: 80px;
+            width: 90%;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .VerticalAlignment h1 {
+            font-size: 25px;
         }
     </style>
 </head>
 <body>
     <nav>
-        <h1>FunStore</h1>
+        <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png" alt="Logo">
+        <div class="ButtonI" style="color: #748dff;">
+            <p>Extensions</p>
+            <div class="bottombar" style="background-color: #748dff;"></div>
+        </div>
+        <div class="ButtonI">
+            <p>Lists</p>
+            <div class="bottombar" ></div>
+        </div>
+        <button onclick="window.location.href = '/BrowserPages/'">Home</button>
     </nav>
+    <h1 style="margin-left: 10px; font-weight: 500;">Extensions</h1>
+    <div id="ExtensionHolder">
+        <div class="Extension_Card">
+            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
+            <div class="VerticalAlignment">
+                <h1>Extension Name</h1>
+                <p>Amsterdam</p>
+                <button>Install</button>
+            </div>
+        </div>
+        <div class="Extension_Card">
+            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
+            <div class="VerticalAlignment">
+                <h1>Extension Name</h1>
+                <p>Amsterdam</p>
+                <button>Install</button>
+            </div>
+        </div>
+        <div class="Extension_Card">
+            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
+            <div class="VerticalAlignment">
+                <h1>Extension Name</h1>
+                <p>Amsterdam</p>
+                <button>Install</button>
+            </div>
+        </div>
+        <div class="Extension_Card">
+            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
+            <div class="VerticalAlignment">
+                <h1>Extension Name</h1>
+                <p>Amsterdam</p>
+                <button>Install</button>
+            </div>
+        </div>
+        <div class="Extension_Card">
+            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
+            <div class="VerticalAlignment">
+                <h1>Extension Name</h1>
+                <p>Amsterdam</p>
+                <button>Install</button>
+            </div>
+        </div>
+        <div class="Extension_Card">
+            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
+            <div class="VerticalAlignment">
+                <h1>Extension Name</h1>
+                <p>Amsterdam</p>
+                <button>Install</button>
+            </div>
+        </div>
+        <div class="Extension_Card">
+            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
+            <div class="VerticalAlignment">
+                <h1>Extension Name</h1>
+                <p>Amsterdam</p>
+                <button>Install</button>
+            </div>
+        </div>
+        <div class="Extension_Card">
+            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
+            <div class="VerticalAlignment">
+                <h1>Extension Name</h1>
+                <p>Amsterdam</p>
+                <button>Install</button>
+            </div>
+        </div>
+        <div class="Extension_Card">
+            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
+            <div class="VerticalAlignment">
+                <h1>Extension Name</h1>
+                <p>Amsterdam</p>
+                <button>Install</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
