@@ -181,16 +181,14 @@ body {
 .Extensions {
   width: 300px;
   background-color: rgb(23, 23, 23);
-  height: 370px;
   border-radius: 10px;
   position: absolute;
-  top: 304px;
+  top: 360px;
   left: 90%;
   display: none;
   flex-direction: column;
   align-items: center;
   transform: translate(-50%, -50%);
-  max-height: 750px;
   z-index: 999;
 }
 
