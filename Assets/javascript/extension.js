@@ -21,9 +21,8 @@ function HyperlinkExtension(id, name) {
     const Extension = document.createElement('div')
     Extension.className = 'ExtensionCard';  
     Extension.innerHTML = `<img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/${id}_ico.png" alt="Eruda">
-    <div class="bigbox">
-      <p>${name}</p>
-     <button onclick="ExecuteScript('${id}')">Exeute</button>
+    <p>${name}</p>
+    <button onclick="ExecuteScript('${id}')">▶</button>
     </div>
     </img>`;
 
@@ -37,3 +36,13 @@ function HyperlinkExtension(id, name) {
 // <button onclick="ExecuteScript('eruda')">Exeute</button>
 //</div>
 //</img></div>
+
+if (localStorage.getItem('installationData')) {
+    document.getElementById('NoExtensionsAvailable').remove()
+    if (localStorage.hasOwnProperty('installationData')) {
+        var dataArray = JSON.parse(localStorage.getItem('installationData'));
+        dataArray.forEach(function(item) {
+            HyperlinkExtension(item.id, item.name);
+        });
+    }
+}

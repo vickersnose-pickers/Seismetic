@@ -65,19 +65,22 @@
         .Extension_Card {
             width: 385px;
             box-shadow: 10px 10px 34px -4px rgba(0, 0, 0, 0.567);
-            height: 170px;
+            height: 200px;
+            min-height: 200px;
             border-radius: 10px;
             background-color: white;
             display: flex;
+            gap: 3px;
             flex-direction: row;
             justify-content: center;
             align-items: center;
         }
 
         .Extension_Card img {
-            width: 135px;
+            width: 100px;
             border-radius: 10px;
-            height: 135px;
+            height: 100px;
+            margin-right: 5px;
         }
 
         .VerticalAlignment {
@@ -87,17 +90,36 @@
             flex-direction: column;
         }
 
+        .VerticalAlignment p {
+            font-size: 13px;
+        }
+
         .VerticalAlignment button {
             background-color: rgb(32, 159, 32);
             border: none;
-            height: 80px;
+            height: 30px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
             width: 90%;
             color: white;
+            min-height: 30px;
             border-radius: 5px;
         }
 
         .VerticalAlignment h1 {
             font-size: 25px;
+        }
+
+        .Home {
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+            color: white;
+            border: none;
+            margin-left: auto;
+            border-radius: 250px;
         }
     </style>
 </head>
@@ -106,88 +128,69 @@
         <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png" alt="Logo">
         <div class="ButtonI" style="color: #748dff;">
             <p>Extensions</p>
+            
             <div class="bottombar" style="background-color: #748dff;"></div>
         </div>
         <div class="ButtonI">
             <p>Lists</p>
             <div class="bottombar" ></div>
         </div>
-        <button onclick="window.location.href = '/BrowserPages/'">Home</button>
+        <button onclick="window.location.href = '/BrowserPages/'" class="Home">X</button>
     </nav>
     <h1 style="margin-left: 10px; font-weight: 500;">Extensions</h1>
+    <p style="margin-left: 10px; font-weight: 500;">Installing Any new extensions will require to refresh the browser</p>
     <div id="ExtensionHolder">
-        <div class="Extension_Card">
-            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
-            <div class="VerticalAlignment">
-                <h1>Extension Name</h1>
-                <p>Amsterdam</p>
-                <button>Install</button>
-            </div>
-        </div>
-        <div class="Extension_Card">
-            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
-            <div class="VerticalAlignment">
-                <h1>Extension Name</h1>
-                <p>Amsterdam</p>
-                <button>Install</button>
-            </div>
-        </div>
-        <div class="Extension_Card">
-            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
-            <div class="VerticalAlignment">
-                <h1>Extension Name</h1>
-                <p>Amsterdam</p>
-                <button>Install</button>
-            </div>
-        </div>
-        <div class="Extension_Card">
-            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
-            <div class="VerticalAlignment">
-                <h1>Extension Name</h1>
-                <p>Amsterdam</p>
-                <button>Install</button>
-            </div>
-        </div>
-        <div class="Extension_Card">
-            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
-            <div class="VerticalAlignment">
-                <h1>Extension Name</h1>
-                <p>Amsterdam</p>
-                <button>Install</button>
-            </div>
-        </div>
-        <div class="Extension_Card">
-            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
-            <div class="VerticalAlignment">
-                <h1>Extension Name</h1>
-                <p>Amsterdam</p>
-                <button>Install</button>
-            </div>
-        </div>
-        <div class="Extension_Card">
-            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
-            <div class="VerticalAlignment">
-                <h1>Extension Name</h1>
-                <p>Amsterdam</p>
-                <button>Install</button>
-            </div>
-        </div>
-        <div class="Extension_Card">
-            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
-            <div class="VerticalAlignment">
-                <h1>Extension Name</h1>
-                <p>Amsterdam</p>
-                <button>Install</button>
-            </div>
-        </div>
-        <div class="Extension_Card">
-            <img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/funstore.png"></img>
-            <div class="VerticalAlignment">
-                <h1>Extension Name</h1>
-                <p>Amsterdam</p>
-                <button>Install</button>
-            </div>
-        </div>
     </div>
+    <script>
+fetch('https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/extensions.json', {
+  cache: 'no-store'
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('sigma error');
+    }
+    return response.json();
+  })
+  .then(data => {
+    data.forEach(extension => {
+      const Div = document.createElement('div');
+      Div.className = 'Extension_Card';
+      document.getElementById('ExtensionHolder').appendChild(Div)
+      Div.innerHTML = `<img src="https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/${extension.id}_ico.png" ></img>
+            <div class="VerticalAlignment">
+                <h1>${extension.Name}</h1>
+                <p>${extension.description}</p>
+                <button onclick="Install('${extension.id}', '${extension.Name}', '${extension.description}')">Install</button>
+            </div>`;
+    });
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
+
+  function Install(ID, Name, description) {
+    var existingData = localStorage.getItem('installationData');
+    var dataArray = existingData ? JSON.parse(existingData) : [];
+    var isIDExists = dataArray.some(function(item) {
+        return item.id === ID;
+    });
+
+    if (isIDExists) {
+        console.log("Entry with ID " + ID + " already exists.");
+        return;
+    }
+    var newData = {
+        id: ID,
+        name: Name,
+        description: description
+    };
+
+    dataArray.push(newData);
+    var updatedJsonData = JSON.stringify(dataArray);
+    localStorage.setItem('installationData', updatedJsonData);
+}
+
+
+    </script>
 </body>
 </html>
