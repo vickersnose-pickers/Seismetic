@@ -1,7 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(10, 10, 10);
 }
+
+html {
+  background-color: rgb(10, 10, 10);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+nav h1 {
+  color: white;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.Seperator {
+  width: 450px;
+  height: 5px;
+  background: rgb(105, 227, 74);
+  background: linear-gradient(
+    90deg,
+    rgba(105, 227, 74, 1) 0%,
+    rgba(25, 126, 0, 1) 100%
+  );
+  border-radius: 15px;
+}
+
+.MainContent {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.SidePanel {
+  width: 325px;
+  border-radius: 15px;
+  height: 580px;
+  background-color: rgb(23, 23, 23);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SettingPanel {
+  width: 850px;
+  height: 580px;
+  border-radius: 15px;
+  background-color: rgb(23, 23, 23);
+}
+
+.iOS_Setting {
+  margin-top: 10px;
+  width: 93%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 55px;
+  border-radius: 8px;
+  background-color: rgb(34, 34, 34);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1b1b1b;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3cd134;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #30d12a;
+}
+
+.Logo {
+    width: 40px;
+    border-radius: 8px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: orange;
+}
+
+.iOS_Setting p {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 5px;
+}
+
+    input[type="checkbox"].ios8-switch {
+        position: absolute;
+        margin: 8px 0 0 16px;    
+    }
+    input[type="checkbox"].ios8-switch + label {
+        position: relative;
+        padding: 5px 0 0 50px;
+        line-height: 2.0em;
+    }
+    input[type="checkbox"].ios8-switch + label:before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 19;
+        top: -6px;
+        width: 40px; /* x*5 */
+        height: 24px; /* x*3 */
+        border-radius: 16px; /* x*2 */
+        background: #ababab;
+        border: 1px solid #d9d9d9;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    input[type="checkbox"].ios8-switch + label:after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 50px;
+        top: -6px;
+        width: 24px; /* x*3 */
+        height: 24px; /* x*3 */
+        border-radius: 16px; /* x*2 */
+        background: #fff;
+        border: 1px solid #d9d9d9;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    input[type="checkbox"].ios8-switch + label:hover:after {
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    input[type="checkbox"].ios8-switch:checked + label:after {
+        margin-left: 16px;
+    }
+    input[type="checkbox"].ios8-switch:checked + label:before {
+        background: #55D069;
+    }
