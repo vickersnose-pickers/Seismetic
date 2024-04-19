@@ -27,6 +27,7 @@ function startMain() {
         height: 100vh;
         border: none;
       }
+
     </style>
   </head>
   <body>

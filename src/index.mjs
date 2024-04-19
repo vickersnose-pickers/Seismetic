@@ -1,49 +1,41 @@
-//configuration
-console.log('🔑 |Starting Seismetic -');
-const BareDirectory = '/bare/';
-const PORT = 4242;
-const FrontEnd = 'public';
-const BrowserPages = 'BrowserPages';
-
 import express from 'express';
 import http from 'node:http';
 import { createBareServer } from "bsn";
 import path from 'node:path';
 
-const HTTP_S = http.createServer();
-console.log('💽| Created Server');
+const PORT = 4242;
+const BareDirectory = '/bare/';
+const FrontEnd = 'public';
+const BrowserPages = 'BrowserPages';
 const __dirname = process.cwd();
-const app = express(HTTP_S);
+
+const server = http.createServer();
+const app = express(server);
 const bareServer = createBareServer(BareDirectory);
-console.log('💽| Created Bare Server');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, FrontEnd)));
-app.use('/BrowserPages', express.static(path.join(__dirname, BrowserPages)));
-app.use('/Assets', express.static(path.join(__dirname, './Assets')));
+app.use('/BrowserPages', express.static(path.join(__dirname, `/src/${BrowserPages}`)));
+app.use('/assets', express.static(path.join(__dirname, '/src/assets')));
 
-HTTP_S.on('request', (req, res) => {
+server.on('request', (req, res) => {
     if (bareServer.shouldRoute(req)) {
-      bareServer.routeRequest(req, res);
+        bareServer.routeRequest(req, res);
     } else {
-      app(req, res);
+        app(req, res);
     }
-  });
-  
-  HTTP_S.on('upgrade', (req, socket, head) => {
+});
+
+server.on('upgrade', (req, socket, head) => {
     if (bareServer.shouldRoute(req)) {
-      bareServer.routeUpgrade(req, socket, head);
+        bareServer.routeUpgrade(req, socket, head);
     } else {
-      socket.end();
+        socket.end();
     }
-  });
-  
-  HTTP_S.on('listening', () => {
-    console.log(`✅ | Succesfully started Seismetic`);
-    console.log(`👁️ |Running at http://localhost:${PORT} or http://127.0.0.1${PORT}`);
-  });
-  
-  HTTP_S.listen({
-    port: PORT,
-  });
+});
+
+server.listen(PORT, () => {
+    console.log(`✅ | Successfully started Seismetic`);
+    console.log(`👁️ | Running at http://localhost:${PORT}`);
+});
