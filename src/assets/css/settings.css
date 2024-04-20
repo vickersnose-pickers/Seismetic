@@ -77,6 +77,10 @@ nav h1 {
   background-color: rgb(34, 34, 34);
 }
 
+.iOS_Setting p {
+  user-select: none;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
@@ -102,7 +106,12 @@ nav h1 {
     border-radius: 8px;
     height: 40px;
     margin-left: 10px;
+    display: flex; justify-content: center; align-items: center;
     background-color: orange;
+}
+
+.Logo span {
+  color: white;
 }
 
 .iOS_Setting p {
@@ -124,7 +133,7 @@ nav h1 {
         content: "";
         position: absolute;
         display: block;
-        left: 19;
+        left: 70px;
         top: -6px;
         width: 40px; /* x*5 */
         height: 24px; /* x*3 */
@@ -138,7 +147,7 @@ nav h1 {
         content: "";
         position: absolute;
         display: block;
-        left: 50px;
+        left: 70px;
         top: -6px;
         width: 24px; /* x*3 */
         height: 24px; /* x*3 */
@@ -156,4 +165,16 @@ nav h1 {
     }
     input[type="checkbox"].ios8-switch:checked + label:before {
         background: #55D069;
+    }
+
+    .OpenPanelButton {
+      width: 35px;
+      height: 35px;
+      border: none;
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      border-radius: 250px;
+      margin-left: auto;
+      margin-right: 10px;
+      background-color: #2e2e2e;
     }
