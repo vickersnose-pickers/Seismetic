@@ -33,7 +33,20 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: slideUp 0.5s ease forwards;
+  /* Initially hide the element */
+  transform: translateY(100%);
+  opacity: 0;
+  z-index: -5;
   align-items: center;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 1;
+  }
 }
 
 .BigLine p {
@@ -177,14 +190,26 @@ body {
   width: 100%;
   height: inherit;
   border: none;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start from fully transparent */
+  }
+  to {
+    opacity: 1; /* End at fully opaque */
+  }
+}
+
 
 .Extensions {
   width: 300px;
   background-color: rgb(23, 23, 23);
   border-radius: 10px;
   position: absolute;
-  top: 360px;
+  top: 390px;
   left: 89%;
   display: none;
   flex-direction: column;

@@ -29,13 +29,6 @@ function HyperlinkExtension(id, name) {
     document.getElementById('ext').appendChild(Extension);
 }
 
-//<div class="ExtensionCard">
-//<img src="https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGdE5VzPRli24SpK9ph68u1Y=/eruda-mobile-browser-console-2023-01-04%2000-00-00-2024-03-06%2017-34-30" alt="Eruda">
-//<div class="bigbox">
-//  <p>Eruda</p>
-// <button onclick="ExecuteScript('eruda')">Exeute</button>
-//</div>
-//</img></div>
 
 if (localStorage.getItem('installationData')) {
     document.getElementById('NoExtensionsAvailable').remove()
