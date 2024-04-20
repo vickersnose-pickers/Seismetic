@@ -29,6 +29,8 @@ function startMain() {
       }
 
     </style>
+    <title>Home</title>
+    <link rel="icon" type="image/png" href="https://ssl.gstatic.com/classroom/favicon.png">
   </head>
   <body>
     <iframe src='${url}'>
