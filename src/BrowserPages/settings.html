@@ -26,7 +26,7 @@
                     domain
                     </span></div>
                 <p>Proxy Settings</p>
-                <button class="OpenPanelButton" id="p_btn">></button>
+                <button class="OpenPanelButton" id="p_btn" onclick="OpenCard('proxy')">></button>
             </div>
             <div class="iOS_Setting">
                 <div class="Logo" style="background-color: rgb(255, 76, 76);"><span class="material-symbols-outlined">
@@ -74,11 +74,21 @@
                 <div class="Seperator"></div>
                 <p style="text-align: center;">If your cloaking didnt start correctly</p>
                 <p style="text-align: center;">You can manually start it over here</p>
-                <button class="Type1" style="margin-top: 5px;">Window Cloak</button>
-                <button class="Type1" style="margin-top: 5px;">Tab Cloak</button>
+                <button class="Type1" style="margin-top: 5px;" onclick="WindowCloak('../browser/')">Window Cloak</button>
+                <button class="Type1" style="margin-top: 5px;" onclick="TabCloak('../browser/')">Tab Cloak</button>
+                <button class="Type1" style="margin-top: 5px;" onclick="window.open('../browser/')">Direct</button>
+            </div>
+            <div class="Setting" id="proxy_card" style="display: none; align-items: center;">
+                <h1>Proxy</h1>
+                <div class="Seperator"></div>
+                <p>Pick your proxy</p>
+                <div class="HolderWolder"><div class="ProxySelectionTab"><img alt="Ultraviolet" src="../Assets/images/ultraviolet.png"><p>Ultraviolet</p></div> <div class="ProxySelectionTab"><img alt="Rammerhead" src="../Assets/images/rammerhead.png"><p>Rammerhead</p></div><div class="ProxySelectionTab"><img alt="dynamic" src="../Assets/images/dynami.png"><p>Dynamic</p></div> <div class="ProxySelectionTab"><img alt="nodeunblocker" src="../Assets/images/node.png"><p>Node Unblocker</p></div> </div>
+                <div class="Seperator"></div>
+                <p>Your Cloaking Mode</p>
             </div>
         </div>
     </div>
     <script src="../Assets/javascript/settings.js"></script>
+    <script src="../Assets/javascript/cloaks.js"></script>
 </body>
 </html>

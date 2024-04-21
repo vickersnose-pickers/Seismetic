@@ -230,3 +230,31 @@ html {
       font-family: "Montserrat", sans-serif;
       text-align: center;
     }
+
+    .ProxySelectionTab {
+      width: 185px;
+      height: 45px;
+      background-color: #1b1b1b;
+      border: 1px solid #282828;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      user-select: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ProxySelectionTab img {
+      width: 35px;
+      height: 35px;
+      border-radius: 5px;
+    }
+
+    .HolderWolder {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      height: 130px;
+    }
