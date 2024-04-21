@@ -104,7 +104,7 @@ document.getElementById('extension').onclick = function () {
 if (localStorage.getItem('basic-config')) {
   console.log('ready!')
 } else {
-  var jsonData = { airplane_mode: false, search_engine: 'https://www.google.com/search?q=%s', proxy: 1, theme: 'main', proxy_opening_mode: 'main'};
+  var jsonData = { airplane_mode: false, search_engine: 'https://www.google.com/search?q=%s', proxy: 1, theme: 'default', proxy_opening_mode: 'main'};
   var jsonString = JSON.stringify(jsonData);
   localStorage.setItem('basic-config', jsonString);
   console.log('now ready!')
