@@ -54,16 +54,23 @@
                     info
                     </span></div>
                 <p>Info</p>
-                <button class="OpenPanelButton" id="b_btn">></button>
+                <button class="OpenPanelButton" id="b_btn" onclick="OpenCard('about')">></button>
             </div>
         </div>
         <div class="SettingPanel">
-            <div class="Setting" style="justify-content: center; align-items: center;" id="default_no_setting_selected">
+            <div class="Setting" style="justify-content: center; align-items: center; display: flex;" id="default_card">
                 <h1>No Setting Selected</h1>
                 <div class="Seperator"></div>
             </div>
+            <div class="Setting" id="about_card" style="display: none;">
+                <h1>About Seismetic</h1>
+                <div class="Seperator"></div>
+                <p style="text-align: center;">Project Started by @rxfe.a</p>
+                <p style="text-align: center;">Final Version</p>
+                <img src="h">
+            </div>
         </div>
     </div>
-    <script src="../Assets/js/settings.js"></script>
+    <script src="../Assets/javascript/settings.js"></script>
 </body>
 </html>

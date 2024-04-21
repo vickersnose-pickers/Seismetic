@@ -78,6 +78,8 @@ html {
   width: 850px;
   height: 580px;
   border-radius: 15px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
   background-color: rgb(23, 23, 23);
 }
 

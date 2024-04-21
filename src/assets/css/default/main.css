@@ -5,6 +5,9 @@
             flex-direction: column;
             margin: 0;
             padding: 0;
+            background-image: url("./Background.png");
+            background-size: cover;
+            background-repeat: no-repeat;
             height: 100vh;
             font-family: "Inter", sans-serif;
         }
