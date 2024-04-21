@@ -142,7 +142,8 @@
     <div id="ExtensionHolder">
     </div>
     <script>
-fetch('https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/extensions.json', {
+function LoadStore() {
+    fetch('https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/extensions.json', {
   cache: 'no-store'
 })
   .then(response => {
@@ -191,7 +192,23 @@ fetch('https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/extensions.json',
     var updatedJsonData = JSON.stringify(dataArray);
     localStorage.setItem('installationData', updatedJsonData);
 }
+}
 
+function overrideLocalStorageColoring() {
+    if (localStorage.hasOwnProperty('installationData')) {
+        var dataArray = JSON.parse(localStorage.getItem('installationData'));
+        dataArray.forEach(function(item) {
+            document.getElementById(item.id).style.backgroundColor = 'red';
+            document.getElementById(item.id).textContent = 'Installed';
+        });
+    }
+}
+document.body.onload = function () {
+    LoadStore()
+    setTimeout(() => {
+        overrideLocalStorageColoring()
+    }, 150);
+}
 
     </script>
 </body>
