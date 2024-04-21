@@ -91,7 +91,13 @@ document.getElementById('extension').onclick = function () {
   if (document.getElementById('ext').style.display == 'flex') {
     document.getElementById('ext').style.display = 'none';
   } else {
-    document.getElementById('ext').style.display = 'flex';
+    const rect = document.getElementById('extension').getBoundingClientRect();
+        const topPosition = rect.bottom + window.scrollY;
+        const leftPosition = rect.left + window.scrollX;
+        document.getElementById('ext').style.position = 'absolute';
+        document.getElementById('ext').style.top = `${topPosition + 250}px`;
+        document.getElementById('ext').style.left = `${leftPosition - 90}px`;
+        document.getElementById('ext').style.display = 'flex';
   }
 }
 
