@@ -160,7 +160,7 @@ fetch('https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/extensions.json',
             <div class="VerticalAlignment">
                 <h1>${extension.Name}</h1>
                 <p>${extension.description}</p>
-                <button onclick="Install('${extension.id}', '${extension.Name}', '${extension.description}')">Install</button>
+                <button onclick="Install('${extension.id}', '${extension.Name}', '${extension.description}')" id='${extension.id}'>Install</button>
             </div>`;
     });
   })
@@ -170,6 +170,8 @@ fetch('https://cdn.jsdelivr.net/gh/SeismeticNetwork/cdn@latest/extensions.json',
 
   function Install(ID, Name, description) {
     var existingData = localStorage.getItem('installationData');
+    document.getElementById(ID).style.backgroundColor = 'red';
+    document.getElementById(ID).textContent = 'Installed';
     var dataArray = existingData ? JSON.parse(existingData) : [];
     var isIDExists = dataArray.some(function(item) {
         return item.id === ID;
