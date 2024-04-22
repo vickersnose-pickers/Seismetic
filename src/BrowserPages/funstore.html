@@ -169,7 +169,9 @@ function LoadStore() {
     console.error('There was a problem with the fetch operation:', error);
   });
 
-  function Install(ID, Name, description) {
+}
+
+function Install(ID, Name, description) {
     var existingData = localStorage.getItem('installationData');
     document.getElementById(ID).style.backgroundColor = 'red';
     document.getElementById(ID).textContent = 'Installed';
@@ -192,7 +194,6 @@ function LoadStore() {
     var updatedJsonData = JSON.stringify(dataArray);
     localStorage.setItem('installationData', updatedJsonData);
 }
-}
 
 function overrideLocalStorageColoring() {
     if (localStorage.hasOwnProperty('installationData')) {
@@ -206,8 +207,8 @@ function overrideLocalStorageColoring() {
 document.body.onload = function () {
     LoadStore()
     setTimeout(() => {
-        overrideLocalStorageColoring()
-    }, 150);
+        overrideLocalStorageColoring();
+    }, 750);
 }
 
     </script>
