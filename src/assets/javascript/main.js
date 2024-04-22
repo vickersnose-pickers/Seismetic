@@ -14,7 +14,11 @@ const searchEngine = document.getElementById("search_engine");
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const url = search(address.value, searchEngine.value);
-
-  window.location.href = `${__uv$config.prefix}${__uv$config.encodeUrl(url)}`;
+  const ProxyURL = `${__uv$config.prefix}${__uv$config.encodeUrl(url)}`;
+  eval(`${JSON.parse(localStorage.getItem('basic-config')).proxy_opening_mode || 'Main'}('${ProxyURL}')`);
   window.parent.postMessage(`ReplaceURL('${url}')`, '*');
 });
+
+function Main(url) {
+  window.location.href = url
+}

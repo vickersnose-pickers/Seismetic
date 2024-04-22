@@ -41,6 +41,13 @@ function SetProxy(numb) {
     document.getElementById(TradeNumb(numb)).style.border = '1px green solid';
 }
 
+function setBrowsingMode(mode) {
+    const OldData = JSON.parse(localStorage.getItem('basic-config'));
+    var jsonData = { airplane_mode: OldData.airplane_mode, search_engine: OldData.search_engine, proxy: OldData.proxy, theme: OldData.theme, proxy_opening_mode: mode};
+    var jsonString = JSON.stringify(jsonData);
+    localStorage.setItem('basic-config', jsonString);
+}
+
 function HideAll() {
     const bs = document.getElementsByClassName('ProxySelectionTab');
     for (let i = 0; i < bs.length; i++) {
