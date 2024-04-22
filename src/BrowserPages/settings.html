@@ -34,14 +34,14 @@
                     palette
                     </span></div>
                 <p>Customization</p>
-                <button class="OpenPanelButton" id="c_btn">></button>
+                <button class="OpenPanelButton" onclick="OpenCard('customization')">></button>
             </div>
             <div class="iOS_Setting">
                 <div class="Logo" style="background-color: rgb(81, 202, 44);"><span class="material-symbols-outlined">
                     public
                     </span></div>
                 <p>Browser</p>
-                <button class="OpenPanelButton" id="b_btn">></button>
+                <button class="OpenPanelButton">></button>
             </div>
             <div class="iOS_Setting">
                 <div class="Logo" style="background-color: rgb(202, 44, 173);"><span class="material-symbols-outlined">
@@ -89,6 +89,24 @@
                 <button class="Type1" style="margin-top: 5px;" onclick="setBrowsingMode('Main')">Open In Browser</button>
                 <button class="Type1" style="margin-top: 5px;" onclick="setBrowsingMode('TabCloak')">Open AB Cloaked </button>
                 <button class="Type1" style="margin-top: 5px;" onclick="setBrowsingMode('window.open')">Open Direct</button>
+            </div>
+            <div class="Setting" id="customization_card" style="display: none; align-items: center;">
+                <h1>Customization</h1>
+                <div class="Seperator"></div>
+                <p>Select your Theme</p>
+                <select id="themes">
+                    <option value="default">Default</option>
+                    <option value="light">Light</option>
+                </select>
+            </div>
+            <div class="Setting" id="customization_card" style="display: none; align-items: center;">
+                <h1>Customization</h1>
+                <div class="Seperator"></div>
+                <p>Select your Theme</p>
+                <select id="themes">
+                    <option value="default">Default</option>
+                    <option value="light">Light</option>
+                </select>
             </div>
         </div>
     </div>
