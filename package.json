@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nebula-services/dynamic": "github:SeismeticNetwork/dn",
     "bsn": "github:SeismeticNetwork/dependecy-1",
     "express": "^4.19.2"
   }
