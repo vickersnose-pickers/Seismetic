@@ -72,3 +72,10 @@ function apply_theme() {
     var jsonString = JSON.stringify(jsonData);
     localStorage.setItem('basic-config', jsonString);
 }
+
+function apply_engine() {
+    const OldData = JSON.parse(localStorage.getItem('basic-config'));
+    var jsonData = { airplane_mode: OldData.airplane_mode, search_engine: document.getElementById('engines').value, proxy: OldData.proxy, theme: OldData.theme, proxy_opening_mode: OldData.proxy_opening_mode};
+    var jsonString = JSON.stringify(jsonData);
+    localStorage.setItem('basic-config', jsonString);
+}

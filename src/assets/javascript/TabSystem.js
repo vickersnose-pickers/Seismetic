@@ -81,7 +81,7 @@ function ReplaceURL(base) {
 document.getElementById('BigBoyForm').addEventListener("submit", async (event) => {
   event.preventDefault();
   const Iframe = document.getElementById(`Tab${SelectedTab}_IFRAME`);
-  const url = search(document.getElementById('BrowserBar').value, 'https://google.com/search?q=%s');
+  const url = search(document.getElementById('BrowserBar').value, JSON.parse(localStorage.getItem('basic-config')).search_engine || 'https://www.google.com/search?q=%s');
   Iframe.src =  __uv$config.prefix + __uv$config.encodeUrl(url);
 });
 

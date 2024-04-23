@@ -86,7 +86,7 @@
                 <div class="HolderWolder"><div onclick="SetProxy(1)" id="uv" class="ProxySelectionTab"><img alt="Ultraviolet" src="../Assets/images/ultraviolet.png"><p>Ultraviolet</p></div> <div onclick="SetProxy(2)" id="rh" class="ProxySelectionTab"><img alt="Rammerhead" src="../Assets/images/rammerhead.png"><p>Rammerhead</p></div><div onclick="SetProxy(3)" id="dn" class="ProxySelectionTab"><img alt="dynamic" src="../Assets/images/dynami.png"><p>Dynamic</p></div> <div onclick="SetProxy(4)" id="nu" class="ProxySelectionTab"><img alt="nodeunblocker" src="../Assets/images/node.png"><p>Node Unblocker</p></div> </div>
                 <div class="Seperator"></div>
                 <p>Your Cloaking Mode</p>
-                <button class="Type1" style="margin-top: 5px;" onclick="setBrowsingMode('Main')">Open In Browser</button>
+                <button class="Type1" style="margin-top: 5px;" onclick="setBrowsingMode('main')">Open In Browser</button>
                 <button class="Type1" style="margin-top: 5px;" onclick="setBrowsingMode('TabCloak')">Open AB Cloaked </button>
                 <button class="Type1" style="margin-top: 5px;" onclick="setBrowsingMode('WindowCloak')">Window Cloak </button>
                 <button class="Type1" style="margin-top: 5px;" onclick="setBrowsingMode('window.open')">Open Direct</button>
@@ -117,7 +117,7 @@
                     <option value="https://www.startpage.com/sp/search?q=%s">Startpage</option>
                     <option value="https://www.dogpile.com/serp?q=%s">dogpile</option>
                   </select>
-                  <button class="Type1" style="margin-top: 5px;" onclick="apply_theme()">Apply</button>
+                  <button class="Type1" style="margin-top: 5px;" onclick="apply_engine()">Apply</button>
                   <button class="Type1" style="margin-top: 5px;" onclick="localStorage.removeItem('installationData'); window.parent.postMessage(`window.location.reload()`, '*');">Remove Extensions</button>
                   <button class="Type1" style="margin-top: 5px;" onclick="localStorage.removeItem('basic-config'); window.parent.postMessage(`window.location.reload()`, '*');">Clear Config</button>
             </div>
