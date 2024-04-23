@@ -41,7 +41,7 @@
                     public
                     </span></div>
                 <p>Browser</p>
-                <button class="OpenPanelButton">></button>
+                <button class="OpenPanelButton" onclick="OpenCard('browser')">></button>
             </div>
             <div class="iOS_Setting">
                 <div class="Logo" style="background-color: rgb(202, 44, 173);"><span class="material-symbols-outlined">
@@ -88,25 +88,38 @@
                 <p>Your Cloaking Mode</p>
                 <button class="Type1" style="margin-top: 5px;" onclick="setBrowsingMode('Main')">Open In Browser</button>
                 <button class="Type1" style="margin-top: 5px;" onclick="setBrowsingMode('TabCloak')">Open AB Cloaked </button>
+                <button class="Type1" style="margin-top: 5px;" onclick="setBrowsingMode('WindowCloak')">Window Cloak </button>
                 <button class="Type1" style="margin-top: 5px;" onclick="setBrowsingMode('window.open')">Open Direct</button>
             </div>
             <div class="Setting" id="customization_card" style="display: none; align-items: center;">
                 <h1>Customization</h1>
                 <div class="Seperator"></div>
                 <p>Select your Theme</p>
-                <select id="themes">
+                <select class="select" id="themes">
                     <option value="default">Default</option>
                     <option value="light">Light</option>
                 </select>
+                <button class="Type1" style="margin-top: 5px;" onclick="apply_theme()">Apply</button>
             </div>
-            <div class="Setting" id="customization_card" style="display: none; align-items: center;">
-                <h1>Customization</h1>
+            <div class="Setting" id="browser_card" style="display: none; align-items: center;">
+                <h1>Browser</h1>
                 <div class="Seperator"></div>
-                <p>Select your Theme</p>
-                <select id="themes">
-                    <option value="default">Default</option>
-                    <option value="light">Light</option>
-                </select>
+                <p>Select your Search Engine!</p>
+                <select class="select" id="engines">
+                    <option value="https://google.com/search?q=%s">Google</option>
+                    <option value="https://bing.com/search?q=%s">Bing</option>
+                    <option value="https://search.brave.com/search?q=%s">Brave Search</option>
+                    <option value="https://www.ecosia.org/search?method=index&amp;q=%s">ecosia</option>
+                    <option value="https://oceanhero.today/web?q=%s">Ocean Hero</option>
+                    <option value="https://yandex.com/search/?text=%s">Yandex</option>
+                    <option value="https://www.qwant.com/?l=en&amp;q=%s">Qwant</option>
+                    <option value="https://search.brave.com/search?q=%s">Brave</option>
+                    <option value="https://www.startpage.com/sp/search?q=%s">Startpage</option>
+                    <option value="https://www.dogpile.com/serp?q=%s">dogpile</option>
+                  </select>
+                  <button class="Type1" style="margin-top: 5px;" onclick="apply_theme()">Apply</button>
+                  <button class="Type1" style="margin-top: 5px;" onclick="localStorage.removeItem('installationData'); window.parent.postMessage(`window.location.reload()`, '*');">Remove Extensions</button>
+                  <button class="Type1" style="margin-top: 5px;" onclick="localStorage.removeItem('basic-config'); window.parent.postMessage(`window.location.reload()`, '*');">Clear Config</button>
             </div>
         </div>
     </div>

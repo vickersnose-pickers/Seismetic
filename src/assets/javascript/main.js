@@ -15,10 +15,10 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const url = search(address.value, searchEngine.value);
   const ProxyURL = `${__uv$config.prefix}${__uv$config.encodeUrl(url)}`;
-  eval(`${JSON.parse(localStorage.getItem('basic-config')).proxy_opening_mode || 'Main'}('${ProxyURL}')`);
+  eval(`${JSON.parse(localStorage.getItem('basic-config')).proxy_opening_mode || 'main'}('${ProxyURL}')`);
   window.parent.postMessage(`ReplaceURL('${url}')`, '*');
 });
 
-function Main(url) {
-  window.location.href = url
+function main(url) {
+  window.location.href = url;
 }

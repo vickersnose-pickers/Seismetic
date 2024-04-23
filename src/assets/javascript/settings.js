@@ -65,3 +65,10 @@ function TradeNumb(numb) {
     };
     return trades[numb] || '';
 }
+
+function apply_theme() {
+    const OldData = JSON.parse(localStorage.getItem('basic-config'));
+    var jsonData = { airplane_mode: OldData.airplane_mode, search_engine: OldData.search_engine, proxy: OldData.proxy, theme: document.getElementById('themes').value, proxy_opening_mode: OldData.proxy_opening_mode};
+    var jsonString = JSON.stringify(jsonData);
+    localStorage.setItem('basic-config', jsonString);
+}
