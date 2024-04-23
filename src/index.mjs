@@ -1,6 +1,7 @@
 import express from 'express';
 import http from 'node:http';
 import { createBareServer } from "bsn";
+import { dynamicPath } from "@nebula-services/dynamic";
 import path from 'node:path';
 
 const PORT = 4242;
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, FrontEnd)));
 app.use('/BrowserPages', express.static(path.join(__dirname, `/src/${BrowserPages}`)));
+app.use("/dynamic/", express.static(dynamicPath));
 app.use('/Assets', express.static(path.join(__dirname, '/src/assets')));
 
 server.on('request', (req, res) => {

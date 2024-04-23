@@ -1,18 +1,18 @@
 {
   "name": "seismetic",
-  "version": "4.0.0",
+  "version": "4.0.2",
   "description": "The Latest and Final Version of Seismetic",
   "main": "src/index.mjs",
   "scripts": {
     "start": "node src/index.mjs",
-    "version": "echo 4.0.0",
+    "version": "echo 4.0.2",
     "test": "echo TestStore coming soon!"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@nebula-services/dynamic": "github:SeismeticNetwork/dn",
+    "@nebula-services/dynamic": "^0.7.2-patch.2",
     "bsn": "github:SeismeticNetwork/dependecy-1",
     "express": "^4.19.2"
   }

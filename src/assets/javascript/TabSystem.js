@@ -109,3 +109,17 @@ if (localStorage.getItem('basic-config')) {
   localStorage.setItem('basic-config', jsonString);
   console.log('now ready!')
 }
+
+setTimeout(() => {
+  navigator.serviceWorker.register('../sw.js', {
+      scope: __uv$config.prefix,
+    });
+    console.log('Ultraviolet Registered -->')
+}, 103);
+
+setTimeout(() => {
+  navigator.serviceWorker.register('../d-sw.js', {
+      scope: __dynamic$config.prefix,
+    });
+    console.log('Dynamic Registered -->')
+}, 103);
