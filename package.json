@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.mjs",
     "version": "echo 4.0.2",
-    "test": "echo TestStore coming soon!"
+    "test": "node src/test-service.mjs"
   },
   "keywords": [],
   "author": "",
