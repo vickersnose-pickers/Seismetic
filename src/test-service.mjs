@@ -22,7 +22,7 @@ function help() {
     console.log(`TestService 1.0.0`);
     console.log(`-----------------`);
     console.log();
-    console.log('npm test install <param> / Installs any loader from loaders directory');
+    console.log('npm test install <param> / Installs any loader from loaders directory "rammerhead", "nodeunblocker", "multi" ');
     console.log();
     console.log('npm test reset / Resets the loader to its stock form');
     console.log();
@@ -42,10 +42,10 @@ function parrot() {
 
 function install() {
     const installer = process.argv[3];
-    eval(`${installer}_install`)
+    eval(`${installer}_install()`)
 }
 
-const rammerhead_install = function() {
+function rammerhead_install() {
   try {
     const rammerheadPath = require.resolve('rammerhead');
     console.log('--> Overriding');
@@ -57,13 +57,13 @@ const rammerhead_install = function() {
 }
 };
 
-const multi_install = function() {
+function multi_install() {
   exec('npm install unblocker');
   exec('npm install https://github.com/holy-unblocker/rammerhead/releases/download/v1.2.41-holy.5/rammerhead-1.2.41-holy.5.tgz');
   multi_installationgeewillikersohmygollygeeiswearimgettingreallymadthatihavetorightthisfunctionoverandoverandoveragainlikewhenwillievercatchabreakAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa();
 };
 
-const nodeunblocker_install = function() {
+function nodeunblocker_install() {
   try {
     const nodeunblockerPath = require.resolve('unblocker');
     console.log('--> Overriding');
