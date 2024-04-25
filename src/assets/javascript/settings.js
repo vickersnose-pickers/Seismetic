@@ -79,3 +79,25 @@ function apply_engine() {
     var jsonString = JSON.stringify(jsonData);
     localStorage.setItem('basic-config', jsonString);
 }
+
+// rammerhead & node bs
+document.getElementById('rh').style.display = 'none';
+document.getElementById('nu').style.display = 'none';
+fetch('../status.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (data.isRammerheadEnabled == true) {
+            document.getElementById('rh').style.display = 'flex';
+        }
+        if (data.isNodeUnblockerEnabled == true) {
+            document.getElementById('nu').style.display = 'flex';
+        }
+      })
+      .catch(error => {
+        console.error('There was a problem fetching the config:', error);
+      });
