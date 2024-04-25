@@ -112,7 +112,6 @@ async function reset() {
       console.error('Error reading or writing file:', error);
     }
   }
-
   async function nodeunblocker_installscriptgeeperscreepersifyousomehowmanagetotypethisintothecommandlineyouwillreceiveacookie() {
     try {
       const data = await readFile('./src/loaders/nodeunblocker.js', 'utf8');
