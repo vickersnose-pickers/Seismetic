@@ -33,7 +33,7 @@ function return_dn_url(url) {
 }
 
 function return_rh_url(url) {
-  const custom_url = `rammerhead.html#go=${url}`
+  const custom_url = `../rammerhead.html#${url}`
   return custom_url;
 }
 
