@@ -3,18 +3,17 @@
 <head>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" type="module"></script>
+    <link rel="stylesheet" href="../Assets/css/rammerhead.css">
+    <script src="dist/rh-main.js" type="module"></script>
 
     <title>Rammerhead</title>
 </head>
 <body>
     <header>
-        <img src="logo.png" />
+        <img src="https://raw.githubusercontent.com/amethystnetwork-dev/Rammerhead/main/static/logo.png" />
         <h1>Rammerhead</h1>
     </header>
     <div class="container mb-5">
-        <p class="mt-3 mb-3 fw">Join the <a href="https://amethystnetwork-dev.github.io/discord/invite" target="_blank">Amethyst Network Discord server</a> or <a href="https://github.com/amethystnetwork-dev/Rammerhead" target="_blank">Fork me on GitHub</a></p>
         <p class="mb-0 fw-bold">Notice: inactive sessions will be deleted after 3 days or if the server shuts down and does not persist files.</p>
         <p class="mb-3 fw-bold">Notice 2: Treat every session id like an isolated incognito browser that
             belongs only to you. DO NOT SHARE THE SESSION ID. All logins that you make with the session id will be saved
@@ -63,6 +62,44 @@
             </tbody>
         </table>
     </div>
+    <script> 
+function replaceID() {
+  const sessionData = localStorage.getItem("rammerhead_sessionids");
+  if (sessionData) {
+    try {
+      const sessions = JSON.parse(sessionData);
+      sessions.forEach((session) => {
+        document.getElementById('session-id').value = session.id;
+      });
+    } catch (error) {
+      console.error("Error reading data:", error);
+    }
+  } else {
+    console.log("nothing found in localstorage");
+  }
+}
+
+var fragment = window.location.hash;
+var data = fragment.substring(1);
+
+if (localStorage.getItem('rammerhead_sessionids')) {
+    console.log('old user detected')
+    replaceID()
+} else {
+    console.log('new user detected')
+    document.getElementById('session-create-btn')
+}
+
+if (data) {
+    setTimeout(() => {
+        replaceID()
+        document.getElementById('session-url').value = data;
+        document.getElementById('session-go').click()
+    }, 100);
+}
+
+
+    </script>
 </body>
 
 </html>
