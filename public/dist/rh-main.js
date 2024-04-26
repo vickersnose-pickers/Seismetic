@@ -1,5 +1,5 @@
-import StrShuffler from "../lib/StrShuffler.js";
-import Api from "../lib/api.js";
+import StrShuffler from "./lib/StrShuffler.js";
+import Api from "./lib/api.js";
 
 function setError(err) {
     var element = document.getElementById("error-text");
@@ -154,7 +154,6 @@ window.addEventListener("error", setError);
             setError();
             api.newsession().then((id) => {
                 addSession(id);
-                this.localStorage.setItem('rh_default', id)
                 document.getElementById("session-id").value = id;
                 document.getElementById("session-httpproxy").value = "";
             });
