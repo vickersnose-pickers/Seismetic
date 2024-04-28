@@ -5,7 +5,7 @@ import { dynamicPath } from "@nebula-services/dynamic";
 import path from 'node:path';
 import createRammerhead from "rammerhead/src/server/index.js";
 import { hostname } from "node:os";
-import Unblocker from "unblocker";
+import Unblocker from "fetch-behind";
 
 const PORT = 4242;
 const BareDirectory = '/bare/';
