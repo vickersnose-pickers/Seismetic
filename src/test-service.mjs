@@ -57,28 +57,6 @@ function rammerhead_install() {
 }
 };
 
-function multi_install() {
-  exec('npm install unblocker');
-  exec('npm install https://github.com/holy-unblocker/rammerhead/releases/download/v1.2.41-holy.5/rammerhead-1.2.41-holy.5.tgz');
-  multi_installationgeewillikersohmygollygeeiswearimgettingreallymadthatihavetorightthisfunctionoverandoverandoveragainlikewhenwillievercatchabreakAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa();
-};
-
-function nodeunblocker_install() {
-  try {
-    const nodeunblockerPath = require.resolve('unblocker');
-    console.log('--> Overriding');
-    nodeunblocker_installscriptgeeperscreepersifyousomehowmanagetotypethisintothecommandlineyouwillreceiveacookie()
-    
-} catch (error) {
-    console.log('--> Node Unblocker not Detected! Auto installing');
-    exec('npm install unblocker');
-    nodeunblocker_installscriptgeeperscreepersifyousomehowmanagetotypethisintothecommandlineyouwillreceiveacookie()
-}
-};
-
-
-
-
 async function reset() {
     try {
       const data = await readFile('./src/loaders/default.js', 'utf8');
@@ -105,39 +83,6 @@ async function reset() {
       const config = {
         isRammerheadEnabled: true,
         isNodeUnblockerEnabled: false
-      };
-      const jsonConfig = JSON.stringify(config, null, 2);
-      fs.writeFileSync('./public/status.json', jsonConfig, 'utf8');
-    } catch (error) {
-      console.error('Error reading or writing file:', error);
-    }
-  }
-  async function nodeunblocker_installscriptgeeperscreepersifyousomehowmanagetotypethisintothecommandlineyouwillreceiveacookie() {
-    try {
-      const data = await readFile('./src/loaders/nodeunblocker.js', 'utf8');
-      console.log('// Installing Nodeunblocker')
-      await writeFile('./src/index.mjs', data);
-      console.log('Data written to index.mjs successfully!');
-      const config = {
-        isRammerheadEnabled: false,
-        isNodeUnblockerEnabled: true
-      };
-      const jsonConfig = JSON.stringify(config, null, 2);
-      fs.writeFileSync('./public/status.json', jsonConfig, 'utf8');
-    } catch (error) {
-      console.error('Error reading or writing file:', error);
-    }
-  }
-
-  async function multi_installationgeewillikersohmygollygeeiswearimgettingreallymadthatihavetorightthisfunctionoverandoverandoveragainlikewhenwillievercatchabreakAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa() {
-    try {
-      const data = await readFile('./src/loaders/all.js', 'utf8');
-      console.log('// Installing Nodeunblocker & Rammerhead')
-      await writeFile('./src/index.mjs', data);
-      console.log('Data written to index.mjs successfully!');
-      const config = {
-        isRammerheadEnabled: true,
-        isNodeUnblockerEnabled: true
       };
       const jsonConfig = JSON.stringify(config, null, 2);
       fs.writeFileSync('./public/status.json', jsonConfig, 'utf8');

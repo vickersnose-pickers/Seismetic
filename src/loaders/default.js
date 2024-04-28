@@ -3,6 +3,8 @@ import http from 'node:http';
 import { createBareServer } from "bsn";
 import { dynamicPath } from "@nebula-services/dynamic";
 import path from 'node:path';
+import { hostname } from "node:os";
+import Unblocker from "unblocker";
 
 const PORT = 4242;
 const BareDirectory = '/bare/';
@@ -20,6 +22,8 @@ app.use(express.static(path.join(__dirname, FrontEnd)));
 app.use('/BrowserPages', express.static(path.join(__dirname, `/src/${BrowserPages}`)));
 app.use("/dynamic/", express.static(dynamicPath));
 app.use('/Assets', express.static(path.join(__dirname, '/src/assets')));
+var unblocker = new Unblocker({prefix: '/webinstance/'});
+app.use(unblocker);
 
 server.on('request', (req, res) => {
     if (bareServer.shouldRoute(req)) {
