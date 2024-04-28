@@ -14,6 +14,7 @@
   "dependencies": {
     "@nebula-services/dynamic": "^0.7.2-patch.2",
     "bsn": "github:SeismeticNetwork/dependecy-1",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "unblocker": "^2.3.0"
   }
 }
