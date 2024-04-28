@@ -11,7 +11,7 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const url = search(address.value, JSON.parse(localStorage.getItem('basic-config')).search_engine || 'https://www.google.com/search?q=%s');
   var config = JSON.parse(localStorage.getItem('basic-config'));
-  const ProxyURL = GetProxyURL(url)
+  const ProxyURL = GetProxyURL(url);
   eval(`${JSON.parse(localStorage.getItem('basic-config')).proxy_opening_mode || 'main'}('${ProxyURL}')`);
   window.parent.postMessage(`ReplaceURL('${url}')`, '*');
 });

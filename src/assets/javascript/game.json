@@ -1,0 +1,8 @@
+[
+    {
+        "Name": "Slope",
+        "proxy_mode": "redirect",
+        "icon": "https://cdn.jsdelivr.net/gh/SeismeticNetwork/SeismeticAssets-V4@latest/icons/slope.png",
+        "url": "/webinstance/https://raw.githack.com/SeismeticNetwork/SeismeticAssets-V4/main/games/slope.html"
+    }
+]
