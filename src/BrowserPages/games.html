@@ -5,24 +5,39 @@
     <link rel="icon" type="image/png" href="https://ssl.gstatic.com/classroom/favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
+<body style="align-items: center; overflow: auto;">
     <nav>
         <button onclick="window.location.href='/BrowserPages/'"><span class="material-symbols-outlined">manage_search</span>Search</button>
         <button style="color: #A7A7A7;" onclick="window.location.href='/BrowserPages/games.html'"><span class="material-symbols-outlined">videogame_asset</span>Games</button>
         <button onclick="window.location.href='/BrowserPages/apps.html'"><span class="material-symbols-outlined">apps</span>Apps</button>
         <button onclick="window.location.href='/BrowserPages/settings.html'"><span class="material-symbols-outlined">settings</span>Settings</button>
     </nav>
-    <div class="VerticalAllign">
-         <h1><span class="material-symbols-outlined">
-            videogame_asset
-            </span>Games</h1>
-            <form> 
-                <input type="text" placeholder="Search Games">
-            </form>
-    </div>
+    <h1 style='font-family: "Montserrat", sans-serif; color: white; justify-content: center; align-items: center; display: flex; font-weight: 600;'>
+        <span style="color: white; margin-left: 5px; font-size: 50px; font-weight: 300;" class="material-symbols-outlined">
+        videogame_asset
+        </span>Games</h1>
+        <div class="search_part_bg">
+            <div class="MiniSearch">
+                <span class="material-symbols-outlined">
+                    search
+                    </span>
+            </div>
+            <input id="sgl" placeholder="Search Game List">
+        </div>
+        <div class="little_items">
+            <button>All Games <span id="game_counter">0</span></button>
+            <button>Favorites <span id="favorite_counter">0</span></button>
+            <button>Custom <span id="custom_counter">0</span></button>
+        </div>
+        <div class="bigdiv">
+            <div class="AppDiv">
+                <img alt="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbA0Pv4yAVMa8ReY2tXNVKuGNVBoCz5q_ULbrWU4e73A&s">
+                <p>Slope</p>
+                <button>▶</button>
+            </div>
+        </div>
     <script src="../Assets/javascript/main.js"></script>
     <script src="../Assets/javascript/search.js"></script>
-    <script src=""></script>
     <script src="../dist/bundle.js?v=5"></script>
     <script src="../dist/config.js?v=5"></script>
 </body>

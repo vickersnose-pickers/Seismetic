@@ -111,7 +111,7 @@
             display: flex;
             flex-direction: column;
             background-color: transparent;
-            justify-content: center;
+            align-items: center;
             text-align: center;
           }
 
@@ -129,3 +129,119 @@
             font-size: 50px;
             font-weight: 300;
           }
+
+          .search_part_bg {
+            width: 400px;
+            height: 50px;
+            background-color: #121212;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .MiniSearch {
+            width: 45px;
+            height: 40px;
+            margin-left: 5px;
+            background-color: #1e1e1e;
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .MiniSearch span {
+            font-weight: 200;
+          }
+
+          #sgl {
+            width: 100%;
+            height: inherit;
+            text-align: center;
+            border: none;
+            color: white;
+            font-family: "Montserrat", sans-serif;
+            background-color: transparent;
+          }
+
+          #sgl:active {
+            stroke: none;
+            outline: none;
+            border: none;
+          }
+
+          #sgl:focus {
+            stroke: none;
+            outline: none;
+            border: none;
+          }
+
+          .little_items {
+            background-color: transparent;
+            width: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            height: 65px;
+            gap: 5px;
+          }
+
+          .little_items button {
+            width: 160px;
+            border: none;
+            color: white;
+            font-family: "Montserrat", sans-serif;
+            height: 35px;
+            border-radius: 5px;
+            background-color: #121212;
+          }
+
+          .little_items button span {
+            color: #5a5a5a;
+          }
+
+      .bigdiv {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        gap: 4px;
+      }
+
+      .AppDiv {
+        width: 165px;
+        height: 235px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+        background-color: #111111;
+        border: 1px solid #292929;
+      }
+
+      .AppDiv img {
+        width: 140px;
+        border-radius: 15px;
+        height: 140px;
+        margin-top: 10px;
+      }
+
+      .AppDiv p {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-size: 17px;
+        margin-top: -0.05px;
+      }
+
+      .AppDiv button {
+        width: 90%;
+        height: 30px;
+        background-color: #03bd22;
+        border: none;
+        border-radius: 15px;
+        color: white;
+      }
